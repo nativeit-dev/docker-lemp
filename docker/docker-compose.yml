@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: app_service
+    environment:
+      - DOMAIN=example.com
+      - EMAIL=admin@example.com
+    ports:
+      - "8000:8000"
+      - "3306:3306"  # MySQL port
+    networks:
+      - app-network
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy_service
+    environment:
+      - DOMAIN=example.com
+      - EMAIL=admin@example.com
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:
