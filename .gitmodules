@@ -1,3 +1,6 @@
 [submodule "inc/composer"]
 	path = inc/composer
 	url = https://github.com/nativeit-dev/docker-composer
+[submodule "snipe-it"]
+	path = snipe-it
+	url = https://github.com/snipe/snipe-it
