@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"dongido.sync-env",
+			"flpgdn.stringtosql",
+			"ms-vscode.powershell",
+			"jeff-hykin.better-dockerfile-syntax"
+		]
+	}
+}

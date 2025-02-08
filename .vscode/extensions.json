@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "mrmlnc.vscode-apache",
+        "eiminsasete.apacheconf-snippets",
+        "dongido.sync-env",
+        "flpgdn.stringtosql",
+        "ms-vscode.powershell",
+        "jeff-hykin.better-dockerfile-syntax",
+        "danileao.css-variables-autocomplete",
+        "ms-mssql.data-workspace-vscode",
+        "formulahendry.docker-extension-pack",
+        "formulahendry.vscode-mysql",
+        "bmewburn.vscode-intelephense-client",
+        "ikappas.composer",
+        "devsense.composer-php-vscode"
+    ]
+}
