@@ -7,8 +7,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Update the package list and install necessary packages
 RUN apt-get update && \
     apt-get install -y \
-    mariadb-server \
-    mariadb-client \
     php \
     php-mysql \
     php-cli \
@@ -21,8 +19,12 @@ RUN apt-get update && \
     unzip && \
     apt-get clean
 
+RUN git clone https://github.com/snipe/snipe-it /var/www/html
+
 # Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php --install-dir=/usr/local/bin --filename=composer
+
+
 
 # Expose the default MariaDB port
 EXPOSE 3306
